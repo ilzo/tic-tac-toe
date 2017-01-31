@@ -7,7 +7,6 @@ $(document).ready(function() {
     gameInit();
 });
 
-
 // Initialize a new tic-tac-toe game
 function gameInit () {
     gameBoard = ['', '', '', '', '', '', '', '', ''];
@@ -48,12 +47,8 @@ function gameInit () {
 
         var thisClass = $(event.target).attr('class');
 
-        //console.log(thisClass);
-        //console.log(event.target.id);
         turns++;
-        
         checkGameState();
-        
         
     });
 }
@@ -148,7 +143,7 @@ function solution (board) {
         return 4;
     }
     
-    console.log("board in solution: " + board);
+    console.log("items in board: " + board);
     
     var horizontal = checkHorizontalRows(board);
     
@@ -182,7 +177,6 @@ function solution (board) {
     
     return 3;
      
-    
 }
 
 
@@ -280,9 +274,7 @@ function checkDiagonalRows(board){
             return 0;
         }
         
-        
     }
    
-    
     return null;
 }
